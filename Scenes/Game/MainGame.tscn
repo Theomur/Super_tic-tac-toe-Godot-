@@ -1,0 +1,199 @@
+[gd_scene load_steps=15 format=3 uid="uid://bltvwd3nq5ri3"]
+
+[ext_resource type="PackedScene" uid="uid://bfm242hewiix5" path="res://Scenes/Game/win.tscn" id="1_5jl82"]
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="1_8etcy"]
+[ext_resource type="Script" uid="uid://d3385a2ro3uv3" path="res://Scripts/MainGameLogic/ai_moves.gd" id="1_oilwc"]
+[ext_resource type="PackedScene" uid="uid://cerujjw5124ku" path="res://Scenes/Game/BigField3x3.tscn" id="2_frf35"]
+[ext_resource type="Script" uid="uid://bu6mafd7yco8l" path="res://Scripts/MainGameLogic/FieldController.gd" id="2_ybmw1"]
+[ext_resource type="PackedScene" uid="uid://bjyhd4uen0k1m" path="res://Scenes/Game/LittleField3x3.tscn" id="3_yprpe"]
+[ext_resource type="FontFile" uid="uid://cdvq2i7ihcs1v" path="res://Text/G8.otf" id="4_f5t76"]
+[ext_resource type="Script" uid="uid://upo3lfuseicr" path="res://Scripts/MainGameLogic/timer.gd" id="5_fgqmo"]
+[ext_resource type="Texture2D" uid="uid://wvufiq4vu4yd" path="res://Images/X.png" id="5_x4otc"]
+[ext_resource type="Texture2D" uid="uid://b410q0xhu088c" path="res://Images/Restart.png" id="6_1605l"]
+[ext_resource type="Script" uid="uid://b0xq0esbltn3e" path="res://Scripts/MainGameLogic/turn_sign.gd" id="6_fgqmo"]
+[ext_resource type="Script" uid="uid://bo4a3bqnp8fr0" path="res://Scripts/MainGameLogic/MainGameButtons.gd" id="7_5jl82"]
+[ext_resource type="Texture2D" uid="uid://ckvph1u1a11jm" path="res://Images/exit.png" id="8_wn6li"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ujj40"]
+font = ExtResource("4_f5t76")
+font_size = 50
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainGame" type="Node2D"]
+
+[node name="Win" parent="." instance=ExtResource("1_5jl82")]
+
+[node name="AI_Moves" type="Node2D" parent="."]
+script = ExtResource("1_oilwc")
+
+[node name="Backg" type="Sprite2D" parent="."]
+self_modulate = Color(7.70092e-07, 0.873513, 0.924528, 1)
+texture = ExtResource("1_8etcy")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 2412)
+
+[node name="Turn lable" type="Label" parent="Backg"]
+offset_left = 59.0
+offset_top = 2224.0
+offset_right = 460.0
+offset_bottom = 2329.0
+text = "Сейчас ходит:"
+label_settings = SubResource("LabelSettings_ujj40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Label" parent="Backg"]
+offset_left = 448.0
+offset_top = 112.0
+offset_right = 734.0
+offset_bottom = 217.0
+text = "00:00.00"
+label_settings = SubResource("LabelSettings_ujj40")
+vertical_alignment = 1
+script = ExtResource("5_fgqmo")
+
+[node name="Turn sign" type="Sprite2D" parent="Backg"]
+position = Vector2(546, 2270)
+scale = Vector2(0.114, 0.114)
+texture = ExtResource("5_x4otc")
+script = ExtResource("6_fgqmo")
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 852.0
+offset_top = 81.0
+offset_right = 1060.0
+offset_bottom = 289.0
+scale = Vector2(0.805, 0.805)
+icon = ExtResource("6_1605l")
+flat = true
+expand_icon = true
+script = ExtResource("7_5jl82")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 81.0
+offset_right = 300.0
+offset_bottom = 289.0
+scale = Vector2(0.805, 0.805)
+icon = ExtResource("8_wn6li")
+flat = true
+expand_icon = true
+script = ExtResource("7_5jl82")
+
+[node name="GridBackgContainer" type="GridContainer" parent="."]
+offset_left = 90.0
+offset_top = 450.0
+offset_right = 90.0
+offset_bottom = 450.0
+columns = 3
+script = ExtResource("2_ybmw1")
+
+[node name="Sprite2D1" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(303.025, 0)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(606.095, 0)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(0, 303.1)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(303.025, 303.1)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(606.095, 303.1)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(0, 605.825)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(303.025, 605.825)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="GridBackgContainer"]
+modulate = Color(0, 0.85771, 0, 1)
+position = Vector2(606.095, 605.825)
+scale = Vector2(1.34667, 1.34667)
+texture = ExtResource("1_8etcy")
+centered = false
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 90.0
+offset_top = 450.0
+offset_right = 998.0
+offset_bottom = 1358.0
+columns = 3
+script = ExtResource("2_ybmw1")
+
+[node name="LittleField1" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField2" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(320, 10)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField3" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(620, 10)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField4" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(10, 320)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField5" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(320, 320)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField6" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(620, 320)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField7" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(10, 630)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField8" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(320, 630)
+scale = Vector2(0.3, 0.3)
+
+[node name="LittleField9" parent="GridContainer" instance=ExtResource("3_yprpe")]
+position = Vector2(620, 630)
+scale = Vector2(0.3, 0.3)
+
+[node name="Field3x3" parent="." instance=ExtResource("2_frf35")]

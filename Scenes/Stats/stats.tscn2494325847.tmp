@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://4ok2aetgemwx"]
+
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="1_dfo7w"]
+[ext_resource type="Texture2D" uid="uid://ckvph1u1a11jm" path="res://Images/exit.png" id="2_4nk7o"]
+[ext_resource type="Script" uid="uid://bo4a3bqnp8fr0" path="res://Scripts/MainGameLogic/MainGameButtons.gd" id="3_7t88o"]
+[ext_resource type="Script" uid="uid://dgmh7d8rtxj37" path="res://Scripts/stats/graph_display.gd" id="4_7t88o"]
+
+[node name="Stats" type="Node2D"]
+
+[node name="Backg" type="Sprite2D" parent="."]
+self_modulate = Color(7.70092e-07, 0.873513, 0.924528, 1)
+texture = ExtResource("1_dfo7w")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 2412)
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 81.0
+offset_right = 300.0
+offset_bottom = 289.0
+scale = Vector2(0.805, 0.805)
+icon = ExtResource("2_4nk7o")
+flat = true
+expand_icon = true
+script = ExtResource("3_7t88o")
+
+[node name="GraphDisplay1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 140.0
+offset_top = 400.0
+offset_right = 940.0
+offset_bottom = 1200.0
+script = ExtResource("4_7t88o")
+
+[node name="GraphDisplay2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 140.0
+offset_top = 1200.0
+offset_right = 940.0
+offset_bottom = 2000.0
+script = ExtResource("4_7t88o")

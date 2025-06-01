@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://da1nel2eoxp32"]
+
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="1_evmf2"]
+[ext_resource type="Texture2D" uid="uid://ckvph1u1a11jm" path="res://Images/exit.png" id="2_evmf2"]
+[ext_resource type="FontFile" uid="uid://cdvq2i7ihcs1v" path="res://Text/G8.otf" id="2_nqbwn"]
+[ext_resource type="Texture2D" uid="uid://cd5twdl8pttvr" path="res://Images/screens/godot.windows.opt.tools.64_aQUQAseC86.png" id="3_tl1jg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i6t4g"]
+font = ExtResource("2_nqbwn")
+font_size = 60
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0jdlp"]
+font = ExtResource("2_nqbwn")
+font_size = 60
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="page1" type="Node2D"]
+
+[node name="Backg" type="Sprite2D" parent="."]
+self_modulate = Color(7.70092e-07, 0.873513, 0.924528, 1)
+texture = ExtResource("1_evmf2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 2412)
+
+[node name="exit" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 81.0
+offset_right = 300.0
+offset_bottom = 289.0
+scale = Vector2(0.805, 0.805)
+icon = ExtResource("2_evmf2")
+flat = true
+expand_icon = true
+
+[node name="Godot_windows_opt_tools_64AQuqAseC86" type="Sprite2D" parent="."]
+position = Vector2(537, 1431)
+scale = Vector2(2.24568, 2.24568)
+texture = ExtResource("3_tl1jg")
+
+[node name="TutrPage1" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 266.0
+offset_right = 1033.0
+offset_bottom = 1225.0
+text = "Цель игры - Как и в обычных 
+крестиках-ноликах: собрать 3 
+выигранных маленьких поля 
+в ряд (по горизонтали, 
+вертикали или диагонали) 
+в большом поле.
+
+Супер Крестики-Нолики состоит из:
+9 маленьких полей (3×3)
+Объединённых в одно большое 
+поле (3×3 из маленьких)
+
+"
+label_settings = SubResource("LabelSettings_i6t4g")
+horizontal_alignment = 1
+
+[node name="next" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 667.0
+offset_right = 1041.0
+offset_bottom = 1491.0
+scale = Vector2(0.805, 0.805)
+flat = true
+expand_icon = true
+
+[node name="PressToGo" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 2136.0
+offset_right = 1077.0
+offset_bottom = 3095.0
+text = "Нажми в центр чтобы 
+перейти дальше"
+label_settings = SubResource("LabelSettings_i6t4g")
+horizontal_alignment = 1
+
+[node name="number" type="Label" parent="."]
+offset_left = 959.0
+offset_top = 2229.0
+offset_right = 1039.0
+offset_bottom = 2300.0
+text = "1/4"
+label_settings = SubResource("LabelSettings_0jdlp")
+horizontal_alignment = 1

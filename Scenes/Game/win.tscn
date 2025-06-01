@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfm242hewiix5"]
+
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="1_2sso5"]
+[ext_resource type="Texture2D" uid="uid://yuxckc50vv7i" path="res://Images/O.png" id="2_wd8jw"]
+[ext_resource type="FontFile" uid="uid://cdvq2i7ihcs1v" path="res://Text/G8.otf" id="3_wd8jw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_etxbt"]
+font = ExtResource("3_wd8jw")
+font_size = 200
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Win" type="Node2D"]
+
+[node name="Bloc" type="Sprite2D" parent="."]
+self_modulate = Color(7.70092e-07, 0.873513, 0.924528, 1)
+position = Vector2(40, 400)
+scale = Vector2(5, 5)
+texture = ExtResource("1_2sso5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 200, 200)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bloc"]
+position = Vector2(100, 115)
+scale = Vector2(0.133611, 0.133611)
+texture = ExtResource("2_wd8jw")
+
+[node name="Win" type="Label" parent="Bloc/Sprite2D"]
+offset_left = -630.188
+offset_top = -827.776
+offset_right = 607.812
+offset_bottom = -486.776
+text = "ПОБЕДА!!!"
+label_settings = SubResource("LabelSettings_etxbt")
+horizontal_alignment = 1
+vertical_alignment = 1

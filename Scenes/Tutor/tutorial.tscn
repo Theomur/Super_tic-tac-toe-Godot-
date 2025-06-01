@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhdufttu1edus"]
+
+[ext_resource type="PackedScene" uid="uid://da1nel2eoxp32" path="res://Scenes/Tutor/page_1.tscn" id="1_5ed7f"]
+[ext_resource type="Script" uid="uid://3vkmsa42o0mh" path="res://Scripts/Menu/tutorButtons.gd" id="1_fwsg0"]
+[ext_resource type="PackedScene" uid="uid://v8ft8bhc30pf" path="res://Scenes/Tutor/page_2.tscn" id="2_fwsg0"]
+[ext_resource type="PackedScene" uid="uid://umw32ldg42bu" path="res://Scenes/Tutor/page_3.tscn" id="3_3qyf6"]
+[ext_resource type="PackedScene" uid="uid://bts8bsbc06njs" path="res://Scenes/Tutor/page_4.tscn" id="4_60vav"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_fwsg0")
+
+[node name="page4" parent="." instance=ExtResource("4_60vav")]
+
+[node name="page3" parent="." instance=ExtResource("3_3qyf6")]
+
+[node name="page2" parent="." instance=ExtResource("2_fwsg0")]
+
+[node name="page1" parent="." instance=ExtResource("1_5ed7f")]

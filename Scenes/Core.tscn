@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxrq6ncaf5fya"]
+
+[ext_resource type="PackedScene" uid="uid://bltvwd3nq5ri3" path="res://Scenes/Game/MainGame.tscn" id="1_bow1k"]
+[ext_resource type="PackedScene" uid="uid://4ok2aetgemwx" path="res://Scenes/Stats/stats.tscn" id="2_12piv"]
+[ext_resource type="PackedScene" uid="uid://bhdufttu1edus" path="res://Scenes/Tutor/tutorial.tscn" id="2_ec8af"]
+[ext_resource type="PackedScene" uid="uid://b8chnkiicj0sl" path="res://Scenes/Menu/menu.tscn" id="3_526oq"]
+
+[node name="Core" type="Node2D"]
+
+[node name="MainGame" parent="." instance=ExtResource("1_bow1k")]
+
+[node name="Stats" parent="." instance=ExtResource("2_12piv")]
+
+[node name="Tutorial" parent="." instance=ExtResource("2_ec8af")]
+
+[node name="Menu" parent="." instance=ExtResource("3_526oq")]

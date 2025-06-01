@@ -1,0 +1,232 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjyhd4uen0k1m"]
+
+[ext_resource type="Script" uid="uid://buw5gtyidk5si" path="res://Scripts/MainGameLogic/PopupBehaviour.gd" id="1_8tgpx"]
+[ext_resource type="Texture2D" uid="uid://c7c50v06t0xk1" path="res://Images/Nothing.png" id="2_ti603"]
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="3_ati40"]
+
+[node name="LittleField3x3" type="Node2D"]
+script = ExtResource("1_8tgpx")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 908.0
+offset_bottom = 908.0
+columns = 3
+
+[node name="Button1" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider vr" type="Sprite2D" parent="GridContainer/Button1"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider hb" type="Sprite2D" parent="GridContainer/Button1"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 300)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider vl" type="Sprite2D" parent="GridContainer/Button2"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider vr" type="Sprite2D" parent="GridContainer/Button2"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider hb" type="Sprite2D" parent="GridContainer/Button2"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 300)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider vl" type="Sprite2D" parent="GridContainer/Button3"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider hb" type="Sprite2D" parent="GridContainer/Button3"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 300)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button4" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider vr" type="Sprite2D" parent="GridContainer/Button4"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider hb" type="Sprite2D" parent="GridContainer/Button4"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 300)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider ht" type="Sprite2D" parent="GridContainer/Button4"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button5" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider vl" type="Sprite2D" parent="GridContainer/Button5"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider vr" type="Sprite2D" parent="GridContainer/Button5"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider hb" type="Sprite2D" parent="GridContainer/Button5"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 300)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider ht" type="Sprite2D" parent="GridContainer/Button5"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider vl" type="Sprite2D" parent="GridContainer/Button6"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider hb" type="Sprite2D" parent="GridContainer/Button6"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 300)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider ht" type="Sprite2D" parent="GridContainer/Button6"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider ht" type="Sprite2D" parent="GridContainer/Button7"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider vr" type="Sprite2D" parent="GridContainer/Button7"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider ht" type="Sprite2D" parent="GridContainer/Button8"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider vl" type="Sprite2D" parent="GridContainer/Button8"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider vr" type="Sprite2D" parent="GridContainer/Button8"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(300, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="Button9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+icon = ExtResource("2_ti603")
+flat = true
+expand_icon = true
+
+[node name="divider ht" type="Sprite2D" parent="GridContainer/Button9"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(150, 0)
+rotation = 1.5708
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")
+
+[node name="divider vl" type="Sprite2D" parent="GridContainer/Button9"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 150)
+scale = Vector2(0.03, 1.24)
+texture = ExtResource("3_ati40")

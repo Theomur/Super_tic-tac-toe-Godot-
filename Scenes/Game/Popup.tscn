@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4j2rciudtxxx"]
+
+[ext_resource type="Script" uid="uid://buw5gtyidk5si" path="res://Scripts/MainGameLogic/PopupBehaviour.gd" id="1_82y7s"]
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="1_nwmlw"]
+[ext_resource type="PackedScene" uid="uid://bjyhd4uen0k1m" path="res://Scenes/Game/LittleField3x3.tscn" id="2_82y7s"]
+
+[node name="Popup" type="Node2D"]
+script = ExtResource("1_82y7s")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(0, 0, 0, 0.211765)
+offset_left = -88.0
+offset_top = -121.0
+offset_right = 2908.0
+offset_bottom = 2884.0
+icon = ExtResource("1_nwmlw")
+flat = true
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="BackgBlue" type="Sprite2D" parent="."]
+position = Vector2(50, 1400)
+scale = Vector2(4.34, 4.34)
+texture = ExtResource("1_nwmlw")
+centered = false
+
+[node name="LittleField3x3" parent="." instance=ExtResource("2_82y7s")]
+position = Vector2(90, 1440)

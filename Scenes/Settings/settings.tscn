@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://qjo07jdm2mnf"]
+
+[ext_resource type="Texture2D" uid="uid://c6jhr0qdqlffo" path="res://Images/Color.png" id="1_ytwd3"]
+
+[node name="Settings" type="Node2D"]
+
+[node name="Backg" type="Sprite2D" parent="."]
+self_modulate = Color(7.70092e-07, 0.873513, 0.924528, 1)
+texture = ExtResource("1_ytwd3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 2412)
