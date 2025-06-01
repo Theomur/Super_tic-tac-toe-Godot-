@@ -35,3 +35,12 @@ text = "ПОБЕДА!!!"
 label_settings = SubResource("LabelSettings_etxbt")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Bloc2" type="Sprite2D" parent="."]
+self_modulate = Color(7.70092e-07, 0.873513, 0.924528, 1)
+position = Vector2(294, -79)
+scale = Vector2(2.485, 2.69)
+texture = ExtResource("1_2sso5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 200, 200)

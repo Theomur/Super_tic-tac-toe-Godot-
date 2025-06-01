@@ -45,15 +45,15 @@ func WinCheck():
 	if big_winner == 'X':
 		GameState.winScene.get_child(0).get_child(0).texture = preload("res://Images/X.png")
 		GameState.winscene_show()
-		for i in GameState.StatisticsValues[len(GameState.StatisticsValues) - 2]:
-			GameState.StatisticsValues[i] = GameState.StatisticsValues[i + 1]
+		for i in range(1, GameState.StatisticsValues[len(GameState.StatisticsValues) - 1]):
+			GameState.StatisticsValues[i-1] = GameState.StatisticsValues[i]
 		GameState.StatisticsValues[len(GameState.StatisticsValues) - 1] = GameState.timer_time / 10
 	elif big_winner == 'O':
 		GameState.winScene.get_child(0).get_child(0).texture = preload("res://Images/O.png")
 		GameState.winscene_show()
-		for i in GameState.StatisticsValues[len(GameState.StatisticsValues) - 2]:
-			GameState.StatisticsValues[i] = GameState.StatisticsValues[i + 1]
-		GameState.StatisticsValues[len(GameState.StatisticsValues) - 1] = -1 * (GameState.timer_time / 10)
+		for i in range(1, GameState.StatisticsValues[len(GameState.StatisticsValues) - 1]):
+			GameState.StatisticsValues[i-1] = GameState.StatisticsValues[i]
+		GameState.StatisticsValues[len(GameState.StatisticsValues) - 1] = GameState.timer_time / 10
 
 	return GameState.little_field_winners[GameState.ActiveLittleFieldID] != "-"
 
